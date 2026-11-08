@@ -13,13 +13,13 @@
     <!-- Declare Servlet -->
     <servlet>
         <servlet-name>EmailListServlet</servlet-name>
-        <servlet-class>email.EmailListServlet</servlet-class>
+        <servlet-class>com.testapp.chapter2.email.EmailListServlet</servlet-class>
     </servlet>
 
     <!-- Map URL to Servlet -->
     <servlet-mapping>
         <servlet-name>EmailListServlet</servlet-name>
-        <url-pattern>/emailList</url-pattern>
+            <url-pattern>/emailList</url-pattern>
     </servlet-mapping>
 
     <!-- Default page -->
