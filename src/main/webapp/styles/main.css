@@ -1,31 +1,116 @@
+/* Nền ngoài màu trắng */
+html {
+    background-color: #ffffff;
+}
+
+/* Khung trong có màu xanh băng dịu (Ice Blue) + viền mảnh */
 body {
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
     font-size: 11pt;
-    margin-left: 2em;
-    margin-right: 2em;
+    color: #1e293b;
+    background-color: #f0f9ff;
+    border: 1.5px solid #bae6fd;
+    max-width: 560px;
+    margin: 40px auto;
+    padding: 30px 40px;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(2, 132, 199, 0.10);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    margin: 0 auto 10px auto;
 }
 
 h1 {
-    color: teal; 
+    color: #0369a1;
+    text-align: center;
+    font-size: 1.6em;
+    margin-top: 0;
+    margin-bottom: 0.3em;
+}
+
+h2 {
+    color: #0369a1;
+    font-size: 1.15em;
+    border-bottom: 1px solid #bae6fd;
+    padding-bottom: 6px;
+    margin-top: 1.4em;
+}
+
+h1 + p {
+    text-align: center;
+    color: #475569;
+    margin-top: 0;
+    margin-bottom: 1.5em;
 }
 
 label {
-    float: left; 
-    width: 6em; 
-    margin-bottom: 0.5em;
+    float: left;
+    width: 8.5em;
+    margin-bottom: 0.7em;
+    font-weight: 600;
+    color: #334155;
 }
 
-input[type="text"], input[type="email"] {
-    width: 15em;
-    margin-left: 0.5em; 
-    margin-bottom: 0.5em;
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    width: calc(100% - 9em);
+    padding: 7px 10px;
+    margin-left: 0.5em;
+    margin-bottom: 0.7em;
+    border: 1px solid #7dd3fc;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #1e293b;
+    font-size: 10.5pt;
+    box-sizing: border-box;
+}
+
+select {
+    padding: 6px 10px;
+    margin-left: 0.5em;
+    border: 1px solid #7dd3fc;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #1e293b;
+    font-size: 10.5pt;
+}
+
+/* Hiệu ứng viền sáng lên khi bấm vào ô nhập */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus {
+    outline: none;
+    border-color: #0284c7;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
 }
 
 br {
     clear: both;
 }
 
-#submit {
-    margin-left: 0.5em; 
+#submit,
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin: 1.2em 0 0 0;
+    padding: 10px 16px;
+    background-color: #0284c7;
+    color: #ffffff;
+    font-size: 11pt;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
+#submit:hover,
+input[type="submit"]:hover {
+    background-color: #0369a1;
+}

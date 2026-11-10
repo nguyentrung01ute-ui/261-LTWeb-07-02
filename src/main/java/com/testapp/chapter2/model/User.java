@@ -1,30 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.testapp.chapter2.business;
+package com.testapp.chapter2.model;
 
 import java.io.Serializable;
 
-/**
- *
- * @author Admin
- */
-public class User implements Serializable{
+public class User implements Serializable {
     private String firstName;
-    private String lastName; 
-    private String email; 
-    
-    public User () {
-        firstName = ""; 
-        lastName = ""; 
-        email = ""; 
+    private String lastName;
+    private String email;
+    private String dateOfBirth;
+
+    public User() {
+        this.firstName = "";
+        this.lastName = "";
+        this.email = "";
+        this.dateOfBirth = "";
     }
 
-    public User(String firstName, String lastName, String email) {
+    public User(String firstName, String lastName, String email, String dateOfBirth) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getFirstName() {
@@ -50,6 +45,12 @@ public class User implements Serializable{
     public void setEmail(String email) {
         this.email = email;
     }
-    
-    
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
 }

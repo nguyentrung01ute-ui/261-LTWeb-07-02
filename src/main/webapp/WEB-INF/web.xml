@@ -10,16 +10,16 @@
         <session-timeout>30</session-timeout>
     </session-config>
 
-    <!-- Declare Servlet -->
+    <!-- Declare Controller Servlet -->
     <servlet>
         <servlet-name>EmailListServlet</servlet-name>
-        <servlet-class>com.testapp.chapter2.email.EmailListServlet</servlet-class>
+        <servlet-class>com.testapp.chapter2.controller.EmailListServlet</servlet-class>
     </servlet>
 
-    <!-- Map URL to Servlet -->
+    <!-- Map URL to Controller Servlet -->
     <servlet-mapping>
         <servlet-name>EmailListServlet</servlet-name>
-            <url-pattern>/emailList</url-pattern>
+        <url-pattern>/emailList</url-pattern>
     </servlet-mapping>
 
     <!-- Default page -->
