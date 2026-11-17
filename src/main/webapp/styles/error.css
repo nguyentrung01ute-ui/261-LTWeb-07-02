@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff5f5; /* Nền hồng/đỏ rất nhạt báo hiệu lỗi */
+    color: #842029;
+    margin: 2em;
+}
+
+h1 {
+    color: #dc3545; /* Tiêu đề màu đỏ đậm */
+    margin: 0;
+}
+
+footer {
+    margin-top:20px;
+    padding-top:10px;
+    border-top: 1px solid #f5c2c7;
+    font-size:0.9em
+}

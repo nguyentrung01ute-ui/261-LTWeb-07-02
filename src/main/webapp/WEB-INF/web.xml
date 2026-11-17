@@ -9,11 +9,21 @@
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
+    <!--Dùng chung cho toàn bộ web-->
+    <context-param>
+        <param-name>custServEmail</param-name>
+        <param-value>custserv@murach.com</param-value>
+    </context-param>
+
 
     <!-- Declare Controller Servlet -->
     <servlet>
         <servlet-name>EmailListServlet</servlet-name>
         <servlet-class>com.testapp.chapter2.controller.EmailListServlet</servlet-class>
+        <init-param>
+            <param-name>relativePathToFile</param-name>
+            <param-value>/WEB-INF/EmailList.txt</param-value>
+        </init-param>
     </servlet>
 
     <!-- Map URL to Controller Servlet -->
@@ -28,4 +38,23 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
+    <servlet>
+        <servlet-name>TestServlet</servlet-name>
+        <servlet-class>com.testapp.chapter2.controller.TestServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error_404.jsp</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/error_java.jsp</location>
+    </error-page>
 </web-app>

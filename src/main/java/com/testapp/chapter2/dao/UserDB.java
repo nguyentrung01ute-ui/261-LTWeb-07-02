@@ -1,4 +1,4 @@
-package com.testapp.chapter2.data;
+package com.testapp.chapter2.dao;
 
 import com.testapp.chapter2.model.Survey;
 import com.testapp.chapter2.model.User;

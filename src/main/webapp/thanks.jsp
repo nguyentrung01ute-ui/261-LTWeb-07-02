@@ -1,12 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Murach's Java Servlets and JSP</title>
-        <link rel="stylesheet" href="styles/main.css" type="text/css"/>
-    </head>
-    <body>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ include file="/includes/header.html" %>
+
         <h1>Thanks for joining our email list and survey</h1>
 
         <p>Here is the information that you entered:</p>
@@ -32,16 +27,18 @@
         <label>Email OK:</label>
         <span>${survey.emailOK}</span><br>
 
-        <label>Contact Via:</label>
-        <span>${survey.contactVia}</span><br>
-
-        <p>To enter another email address, click on the Back 
+        <c:if test="${survey.wantsUpdates != 'No'}">
+                <label>Contact Via:</label>
+                <span>${survey.contactVia}</span><br>
+        </c:if>
+<!-- -->
+        <p>To enter another email address, click on the Back
         button in your browser or the Return button shown 
         below.</p>
-
+        <p>Nếu cần hỗ trợ, vui lòng liên hệ: <b>${initParam.custServEmail}</b></p>
         <form action="emailList" method="get">
             <input type="hidden" name="action" value="join">
             <input type="submit" value="Return">
         </form>
-    </body>
-</html>
+
+<%@ include file="/includes/footer.jsp" %>
